@@ -1,0 +1,412 @@
+
+> backend@0.0.1 start
+> nest start
+
+[32m[Nest] 7564  - [39m04/02/2026, 7:36:46 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 7564  - [39m04/02/2026, 7:36:47 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +584ms[39m
+[32m[Nest] 7564  - [39m04/02/2026, 7:36:47 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +46ms[39m
+[32m[Nest] 7564  - [39m04/02/2026, 7:36:47 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +51ms[39m
+[32m[Nest] 7564  - [39m04/02/2026, 7:36:47 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 7564  - [39m04/02/2026, 7:36:47 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCharactersModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 7564  - [39m04/02/2026, 7:36:47 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mGraphQLSchemaBuilderModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 7564  - [39m04/02/2026, 7:36:47 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mGraphQLModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 7564  - [39m04/02/2026, 7:36:48 PM [32m    LOG[39m [38;5;3m[GraphQLModule] [39m[32mMapped {/graphql, POST} route[39m[38;5;3m +633ms[39m
+[32m[Nest] 7564  - [39m04/02/2026, 7:36:48 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +5ms[39m
+GraphQL API ready at http://localhost:3001/graphql
+[31m[Nest] 7564  - [39m04/02/2026, 7:39:53 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientKnownRequestError: 
+Invalid `this.prisma.character.findMany()` invocation in
+C:\Users\LENOVO\Desktop\character_management\backend\src\characters\characters.service.ts:11:34
+
+   8 constructor(private readonly prisma: PrismaService) {}
+   9 
+  10 async findAll(filter?: CharacterFilterInput) {
+→ 11   return this.prisma.character.findMany(
+The table `public.Character` does not exist in the current database.
+    at ei.handleRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:228:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:143:12[90m)[39m
+    at async a [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\getPrismaClient.ts:833:24[90m)[39m
+    at async target [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-context-creator.js:74:28[90m)[39m
+    at async Object.characters [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-proxy.js:9:24[90m)[39m {
+  code: [32m'P2021'[39m,
+  meta: {
+    modelName: [32m'Character'[39m,
+    table: [32m'public.Character'[39m
+  },
+  clientVersion: [32m'6.19.3'[39m
+}
+[31m[Nest] 7564  - [39m04/02/2026, 7:43:55 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientKnownRequestError: 
+Invalid `this.prisma.character.findMany()` invocation in
+C:\Users\LENOVO\Desktop\character_management\backend\src\characters\characters.service.ts:11:34
+
+   8 constructor(private readonly prisma: PrismaService) {}
+   9 
+  10 async findAll(filter?: CharacterFilterInput) {
+→ 11   return this.prisma.character.findMany(
+The table `public.Character` does not exist in the current database.
+    at ei.handleRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:228:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:143:12[90m)[39m
+    at async a [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\getPrismaClient.ts:833:24[90m)[39m
+    at async target [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-context-creator.js:74:28[90m)[39m
+    at async Object.characters [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-proxy.js:9:24[90m)[39m {
+  code: [32m'P2021'[39m,
+  meta: {
+    modelName: [32m'Character'[39m,
+    table: [32m'public.Character'[39m
+  },
+  clientVersion: [32m'6.19.3'[39m
+}
+[31m[Nest] 7564  - [39m04/02/2026, 7:44:03 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientKnownRequestError: 
+Invalid `this.prisma.character.findMany()` invocation in
+C:\Users\LENOVO\Desktop\character_management\backend\src\characters\characters.service.ts:11:34
+
+   8 constructor(private readonly prisma: PrismaService) {}
+   9 
+  10 async findAll(filter?: CharacterFilterInput) {
+→ 11   return this.prisma.character.findMany(
+The table `public.Character` does not exist in the current database.
+    at ei.handleRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:228:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:143:12[90m)[39m
+    at async a [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\getPrismaClient.ts:833:24[90m)[39m
+    at async target [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-context-creator.js:74:28[90m)[39m
+    at async Object.characters [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-proxy.js:9:24[90m)[39m {
+  code: [32m'P2021'[39m,
+  meta: {
+    modelName: [32m'Character'[39m,
+    table: [32m'public.Character'[39m
+  },
+  clientVersion: [32m'6.19.3'[39m
+}
+[31m[Nest] 7564  - [39m04/02/2026, 7:44:04 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientKnownRequestError: 
+Invalid `this.prisma.character.findMany()` invocation in
+C:\Users\LENOVO\Desktop\character_management\backend\src\characters\characters.service.ts:11:34
+
+   8 constructor(private readonly prisma: PrismaService) {}
+   9 
+  10 async findAll(filter?: CharacterFilterInput) {
+→ 11   return this.prisma.character.findMany(
+The table `public.Character` does not exist in the current database.
+    at ei.handleRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:228:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:143:12[90m)[39m
+    at async a [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\getPrismaClient.ts:833:24[90m)[39m
+    at async target [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-context-creator.js:74:28[90m)[39m
+    at async Object.characters [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-proxy.js:9:24[90m)[39m {
+  code: [32m'P2021'[39m,
+  meta: {
+    modelName: [32m'Character'[39m,
+    table: [32m'public.Character'[39m
+  },
+  clientVersion: [32m'6.19.3'[39m
+}
+[31m[Nest] 7564  - [39m04/02/2026, 7:44:07 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientKnownRequestError: 
+Invalid `this.prisma.character.findMany()` invocation in
+C:\Users\LENOVO\Desktop\character_management\backend\src\characters\characters.service.ts:11:34
+
+   8 constructor(private readonly prisma: PrismaService) {}
+   9 
+  10 async findAll(filter?: CharacterFilterInput) {
+→ 11   return this.prisma.character.findMany(
+The table `public.Character` does not exist in the current database.
+    at ei.handleRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:228:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:143:12[90m)[39m
+    at async a [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\getPrismaClient.ts:833:24[90m)[39m
+    at async target [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-context-creator.js:74:28[90m)[39m
+    at async Object.characters [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-proxy.js:9:24[90m)[39m {
+  code: [32m'P2021'[39m,
+  meta: {
+    modelName: [32m'Character'[39m,
+    table: [32m'public.Character'[39m
+  },
+  clientVersion: [32m'6.19.3'[39m
+}
+[31m[Nest] 7564  - [39m04/02/2026, 7:44:08 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientKnownRequestError: 
+Invalid `this.prisma.character.findMany()` invocation in
+C:\Users\LENOVO\Desktop\character_management\backend\src\characters\characters.service.ts:11:34
+
+   8 constructor(private readonly prisma: PrismaService) {}
+   9 
+  10 async findAll(filter?: CharacterFilterInput) {
+→ 11   return this.prisma.character.findMany(
+The table `public.Character` does not exist in the current database.
+    at ei.handleRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:228:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:143:12[90m)[39m
+    at async a [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\getPrismaClient.ts:833:24[90m)[39m
+    at async target [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-context-creator.js:74:28[90m)[39m
+    at async Object.characters [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-proxy.js:9:24[90m)[39m {
+  code: [32m'P2021'[39m,
+  meta: {
+    modelName: [32m'Character'[39m,
+    table: [32m'public.Character'[39m
+  },
+  clientVersion: [32m'6.19.3'[39m
+}
+[31m[Nest] 7564  - [39m04/02/2026, 7:44:09 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientKnownRequestError: 
+Invalid `this.prisma.character.findMany()` invocation in
+C:\Users\LENOVO\Desktop\character_management\backend\src\characters\characters.service.ts:11:34
+
+   8 constructor(private readonly prisma: PrismaService) {}
+   9 
+  10 async findAll(filter?: CharacterFilterInput) {
+→ 11   return this.prisma.character.findMany(
+The table `public.Character` does not exist in the current database.
+    at ei.handleRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:228:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:143:12[90m)[39m
+    at async a [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\getPrismaClient.ts:833:24[90m)[39m
+    at async target [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-context-creator.js:74:28[90m)[39m
+    at async Object.characters [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-proxy.js:9:24[90m)[39m {
+  code: [32m'P2021'[39m,
+  meta: {
+    modelName: [32m'Character'[39m,
+    table: [32m'public.Character'[39m
+  },
+  clientVersion: [32m'6.19.3'[39m
+}
+[31m[Nest] 7564  - [39m04/02/2026, 7:44:10 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientKnownRequestError: 
+Invalid `this.prisma.character.findMany()` invocation in
+C:\Users\LENOVO\Desktop\character_management\backend\src\characters\characters.service.ts:11:34
+
+   8 constructor(private readonly prisma: PrismaService) {}
+   9 
+  10 async findAll(filter?: CharacterFilterInput) {
+→ 11   return this.prisma.character.findMany(
+The table `public.Character` does not exist in the current database.
+    at ei.handleRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:228:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:143:12[90m)[39m
+    at async a [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\getPrismaClient.ts:833:24[90m)[39m
+    at async target [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-context-creator.js:74:28[90m)[39m
+    at async Object.characters [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-proxy.js:9:24[90m)[39m {
+  code: [32m'P2021'[39m,
+  meta: {
+    modelName: [32m'Character'[39m,
+    table: [32m'public.Character'[39m
+  },
+  clientVersion: [32m'6.19.3'[39m
+}
+[31m[Nest] 7564  - [39m04/02/2026, 7:44:12 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientKnownRequestError: 
+Invalid `this.prisma.character.findMany()` invocation in
+C:\Users\LENOVO\Desktop\character_management\backend\src\characters\characters.service.ts:11:34
+
+   8 constructor(private readonly prisma: PrismaService) {}
+   9 
+  10 async findAll(filter?: CharacterFilterInput) {
+→ 11   return this.prisma.character.findMany(
+The table `public.Character` does not exist in the current database.
+    at ei.handleRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:228:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:143:12[90m)[39m
+    at async a [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\getPrismaClient.ts:833:24[90m)[39m
+    at async target [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-context-creator.js:74:28[90m)[39m
+    at async Object.characters [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-proxy.js:9:24[90m)[39m {
+  code: [32m'P2021'[39m,
+  meta: {
+    modelName: [32m'Character'[39m,
+    table: [32m'public.Character'[39m
+  },
+  clientVersion: [32m'6.19.3'[39m
+}
+[31m[Nest] 7564  - [39m04/02/2026, 7:44:13 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientKnownRequestError: 
+Invalid `this.prisma.character.findMany()` invocation in
+C:\Users\LENOVO\Desktop\character_management\backend\src\characters\characters.service.ts:11:34
+
+   8 constructor(private readonly prisma: PrismaService) {}
+   9 
+  10 async findAll(filter?: CharacterFilterInput) {
+→ 11   return this.prisma.character.findMany(
+The table `public.Character` does not exist in the current database.
+    at ei.handleRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:228:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:143:12[90m)[39m
+    at async a [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\getPrismaClient.ts:833:24[90m)[39m
+    at async target [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-context-creator.js:74:28[90m)[39m
+    at async Object.characters [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-proxy.js:9:24[90m)[39m {
+  code: [32m'P2021'[39m,
+  meta: {
+    modelName: [32m'Character'[39m,
+    table: [32m'public.Character'[39m
+  },
+  clientVersion: [32m'6.19.3'[39m
+}
+[31m[Nest] 7564  - [39m04/02/2026, 7:44:14 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientKnownRequestError: 
+Invalid `this.prisma.character.findMany()` invocation in
+C:\Users\LENOVO\Desktop\character_management\backend\src\characters\characters.service.ts:11:34
+
+   8 constructor(private readonly prisma: PrismaService) {}
+   9 
+  10 async findAll(filter?: CharacterFilterInput) {
+→ 11   return this.prisma.character.findMany(
+The table `public.Character` does not exist in the current database.
+    at ei.handleRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:228:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:143:12[90m)[39m
+    at async a [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\getPrismaClient.ts:833:24[90m)[39m
+    at async target [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-context-creator.js:74:28[90m)[39m
+    at async Object.characters [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-proxy.js:9:24[90m)[39m {
+  code: [32m'P2021'[39m,
+  meta: {
+    modelName: [32m'Character'[39m,
+    table: [32m'public.Character'[39m
+  },
+  clientVersion: [32m'6.19.3'[39m
+}
+[31m[Nest] 7564  - [39m04/02/2026, 7:44:15 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientKnownRequestError: 
+Invalid `this.prisma.character.findMany()` invocation in
+C:\Users\LENOVO\Desktop\character_management\backend\src\characters\characters.service.ts:11:34
+
+   8 constructor(private readonly prisma: PrismaService) {}
+   9 
+  10 async findAll(filter?: CharacterFilterInput) {
+→ 11   return this.prisma.character.findMany(
+The table `public.Character` does not exist in the current database.
+    at ei.handleRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:228:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:143:12[90m)[39m
+    at async a [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\getPrismaClient.ts:833:24[90m)[39m
+    at async target [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-context-creator.js:74:28[90m)[39m
+    at async Object.characters [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-proxy.js:9:24[90m)[39m {
+  code: [32m'P2021'[39m,
+  meta: {
+    modelName: [32m'Character'[39m,
+    table: [32m'public.Character'[39m
+  },
+  clientVersion: [32m'6.19.3'[39m
+}
+[31m[Nest] 7564  - [39m04/02/2026, 7:44:16 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientKnownRequestError: 
+Invalid `this.prisma.character.findMany()` invocation in
+C:\Users\LENOVO\Desktop\character_management\backend\src\characters\characters.service.ts:11:34
+
+   8 constructor(private readonly prisma: PrismaService) {}
+   9 
+  10 async findAll(filter?: CharacterFilterInput) {
+→ 11   return this.prisma.character.findMany(
+The table `public.Character` does not exist in the current database.
+    at ei.handleRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:228:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:143:12[90m)[39m
+    at async a [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\getPrismaClient.ts:833:24[90m)[39m
+    at async target [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-context-creator.js:74:28[90m)[39m
+    at async Object.characters [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-proxy.js:9:24[90m)[39m {
+  code: [32m'P2021'[39m,
+  meta: {
+    modelName: [32m'Character'[39m,
+    table: [32m'public.Character'[39m
+  },
+  clientVersion: [32m'6.19.3'[39m
+}
+[31m[Nest] 7564  - [39m04/02/2026, 7:44:17 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientKnownRequestError: 
+Invalid `this.prisma.character.findMany()` invocation in
+C:\Users\LENOVO\Desktop\character_management\backend\src\characters\characters.service.ts:11:34
+
+   8 constructor(private readonly prisma: PrismaService) {}
+   9 
+  10 async findAll(filter?: CharacterFilterInput) {
+→ 11   return this.prisma.character.findMany(
+The table `public.Character` does not exist in the current database.
+    at ei.handleRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:228:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:143:12[90m)[39m
+    at async a [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\getPrismaClient.ts:833:24[90m)[39m
+    at async target [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-context-creator.js:74:28[90m)[39m
+    at async Object.characters [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-proxy.js:9:24[90m)[39m {
+  code: [32m'P2021'[39m,
+  meta: {
+    modelName: [32m'Character'[39m,
+    table: [32m'public.Character'[39m
+  },
+  clientVersion: [32m'6.19.3'[39m
+}
+[31m[Nest] 7564  - [39m04/02/2026, 7:44:45 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientKnownRequestError: 
+Invalid `this.prisma.character.findMany()` invocation in
+C:\Users\LENOVO\Desktop\character_management\backend\src\characters\characters.service.ts:11:34
+
+   8 constructor(private readonly prisma: PrismaService) {}
+   9 
+  10 async findAll(filter?: CharacterFilterInput) {
+→ 11   return this.prisma.character.findMany(
+The table `public.Character` does not exist in the current database.
+    at ei.handleRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:228:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:143:12[90m)[39m
+    at async a [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\getPrismaClient.ts:833:24[90m)[39m
+    at async target [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-context-creator.js:74:28[90m)[39m
+    at async Object.characters [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-proxy.js:9:24[90m)[39m {
+  code: [32m'P2021'[39m,
+  meta: {
+    modelName: [32m'Character'[39m,
+    table: [32m'public.Character'[39m
+  },
+  clientVersion: [32m'6.19.3'[39m
+}
+[31m[Nest] 7564  - [39m04/02/2026, 7:49:29 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientKnownRequestError: 
+Invalid `this.prisma.character.findMany()` invocation in
+C:\Users\LENOVO\Desktop\character_management\backend\src\characters\characters.service.ts:11:34
+
+   8 constructor(private readonly prisma: PrismaService) {}
+   9 
+  10 async findAll(filter?: CharacterFilterInput) {
+→ 11   return this.prisma.character.findMany(
+The table `public.Character` does not exist in the current database.
+    at ei.handleRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:228:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:143:12[90m)[39m
+    at async a [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\getPrismaClient.ts:833:24[90m)[39m
+    at async target [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-context-creator.js:74:28[90m)[39m
+    at async Object.characters [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-proxy.js:9:24[90m)[39m {
+  code: [32m'P2021'[39m,
+  meta: {
+    modelName: [32m'Character'[39m,
+    table: [32m'public.Character'[39m
+  },
+  clientVersion: [32m'6.19.3'[39m
+}
+[31m[Nest] 7564  - [39m04/02/2026, 7:52:24 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientKnownRequestError: 
+Invalid `this.prisma.character.findMany()` invocation in
+C:\Users\LENOVO\Desktop\character_management\backend\src\characters\characters.service.ts:11:34
+
+   8 constructor(private readonly prisma: PrismaService) {}
+   9 
+  10 async findAll(filter?: CharacterFilterInput) {
+→ 11   return this.prisma.character.findMany(
+The table `public.Character` does not exist in the current database.
+    at ei.handleRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:228:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:143:12[90m)[39m
+    at async a [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\getPrismaClient.ts:833:24[90m)[39m
+    at async target [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-context-creator.js:74:28[90m)[39m
+    at async Object.characters [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-proxy.js:9:24[90m)[39m {
+  code: [32m'P2021'[39m,
+  meta: {
+    modelName: [32m'Character'[39m,
+    table: [32m'public.Character'[39m
+  },
+  clientVersion: [32m'6.19.3'[39m
+}
+[31m[Nest] 7564  - [39m04/02/2026, 7:53:26 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientKnownRequestError: 
+Invalid `this.prisma.character.findMany()` invocation in
+C:\Users\LENOVO\Desktop\character_management\backend\src\characters\characters.service.ts:11:34
+
+   8 constructor(private readonly prisma: PrismaService) {}
+   9 
+  10 async findAll(filter?: CharacterFilterInput) {
+→ 11   return this.prisma.character.findMany(
+The table `public.Character` does not exist in the current database.
+    at ei.handleRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:228:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\RequestHandler.ts:143:12[90m)[39m
+    at async a [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@prisma\client[24m\src\runtime\getPrismaClient.ts:833:24[90m)[39m
+    at async target [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-context-creator.js:74:28[90m)[39m
+    at async Object.characters [90m(C:\Users\LENOVO\Desktop\character_management\backend\[39mnode_modules\[4m@nestjs\core[24m\helpers\external-proxy.js:9:24[90m)[39m {
+  code: [32m'P2021'[39m,
+  meta: {
+    modelName: [32m'Character'[39m,
+    table: [32m'public.Character'[39m
+  },
+  clientVersion: [32m'6.19.3'[39m
+}
+^C

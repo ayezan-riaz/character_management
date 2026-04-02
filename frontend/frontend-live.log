@@ -1,0 +1,52 @@
+
+> frontend@0.1.0 dev
+> next dev --webpack
+
+▲ Next.js 16.2.2 (webpack)
+- Local:         http://localhost:3000
+- Network:       http://10.180.120.118:3000
+- Environments: .env.local
+✓ Ready in 1601ms
+
+○ Compiling / ...
+ GET / 200 in 45s (next.js: 44s, application-code: 993ms)
+ GET /firebase-messaging-sw.js 404 in 3.4s (next.js: 2.8s, application-code: 645ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+ 
+ GET /?status=ALIVE 200 in 1059ms (next.js: 100ms, application-code: 959ms)
+ GET /?status=DEAD 200 in 315ms (next.js: 11ms, application-code: 304ms)
+ GET /?status=UNKNOWN 200 in 151ms (next.js: 10ms, application-code: 141ms)
+ GET /?status=UNKNOWN&gender=MALE 200 in 181ms (next.js: 10ms, application-code: 170ms)
+ GET /?status=UNKNOWN&gender=FEMALE 200 in 230ms (next.js: 13ms, application-code: 216ms)
+ GET /?status=UNKNOWN&gender=UNKNOWN 200 in 148ms (next.js: 8ms, application-code: 140ms)
