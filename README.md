@@ -11,7 +11,7 @@ The backend is configured for:
 
 - Database name: `character_management_db`
 - Database user: `postgres`
-- Database password: `Ayezan@987##`
+- Database password: `YOUR_PASSWORD`
 - Backend URL: `http://localhost:3001/graphql`
 - Frontend URL: `http://localhost:3000`
 
@@ -78,21 +78,6 @@ npm.cmd run db:migrate
 npm.cmd run db:seed
 ```
 
-If Prisma shows this error:
-`The table public.Character does not exist`
-it means the migration did not run yet. Run the three commands above.
-
-If Prisma shows this error on Windows:
-`EPERM: operation not permitted, rename ... query_engine-windows.dll.node`
-stop any running Node processes and try again:
-
-```powershell
-taskkill /F /IM node.exe
-npm.cmd --prefix backend run prisma:generate
-npm.cmd --prefix backend run prisma:migrate
-npm.cmd --prefix backend run prisma:seed
-```
-
 ## Step 4: Generate Frontend GraphQL Hooks
 
 ```bash
@@ -130,20 +115,6 @@ npm run lint
 npm run test
 ```
 
-## Troubleshooting
-
-Image fetch timeouts (Dicebear)
-
-The seeded avatars load from `https://api.dicebear.com/...`. If your machine cannot reach that domain,
-the UI will still work but images may fail to load. You can:
-
-- Ensure internet access is allowed to `api.dicebear.com`, or
-- Replace the image URLs in `backend/prisma/seed.ts` with local images.
-
-Hydration warnings like `cz-shortcut-listen="true"` or `data-qb-installed="true"`
-
-These are almost always caused by browser extensions injecting attributes into the page before React loads.
-Open the app in Incognito or disable the extension for `localhost`.
 
 ## Feature Summary
 
